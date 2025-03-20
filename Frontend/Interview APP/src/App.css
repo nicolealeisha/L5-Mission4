@@ -1,0 +1,62 @@
+.container {
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+  display: block;
+}
+
+.chat-box {
+  height: 40vh;
+  width: 30%;
+  border: 1px solid black;
+  margin: auto;
+  overflow-y: scroll;
+}
+
+.human-response {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.response {
+  width: 48vh;
+  height: 3vh;
+  border: 2px solid #43c0f6;
+}
+
+.human-response button {
+  background-color: #43c0f6;
+  color: white;
+  width: 10vh;
+  border: 1px solid black;
+}
+
+.human-response button:hover {
+  background-color: #196b8f;
+  cursor: pointer;
+}
+
+.human-response button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.chat-entry{
+  text-align: left;
+  margin: 1rem;
+}
+
+.user{
+  color:#196b8f;
+}
+
+.model{
+  color:rgb(90, 90, 90)
+}
+
+.loading {
+  background-color: #ccc;
+  cursor: wait;
+}
