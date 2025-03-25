@@ -1,0 +1,212 @@
+
+.pop-up {
+    text-align: center;
+    display: block;
+    position: fixed;
+    margin-top: auto;
+    bottom: 50px;
+    width: 40%;
+    right: 20px;
+    background-color: white;
+    z-index: 100;
+    animation: slidein 5s;
+    border-radius: 9px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #b71234;
+    margin-top: 0;
+    height: 35px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+  }
+  
+  .title{
+    font-size: 18px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+    color: white;
+    margin-left: 5px;
+  }
+
+  .exit{
+    display: flex;
+    justify-content: right;
+    margin-top: 0;
+    margin-right: 5px;
+  }
+
+  .exit:hover{
+    cursor: pointer;
+    color: white;
+  }
+  
+  .chat-box {
+    height: 50vh;
+    width: 100%;
+    overflow-y: auto;
+  }
+  
+  .chat-entry{
+    margin-top: 1rem;
+  }
+  
+  .user{
+    color: #b71234;
+    margin-right: 15px;
+    margin-left: 15px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  p{
+    margin: 0;
+  }
+  
+  .model{
+    color:rgb(90, 90, 90);
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+  }
+  
+  .loading {
+    background-color: #ccc;
+    cursor: wait;
+  }
+
+  .human-response {
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    border-top:#b71234 2px solid;
+}
+  
+  .response {
+    width: 70%;
+    height: 35px;
+    border: none;
+    margin-top: 2px;
+    margin-left: 2px;
+    resize: none;
+  }
+  
+  .human-response button {
+    background-color: #b71234;
+    color: white;
+    width: 30%;
+    border: none;
+  }
+  
+  .human-response button:hover {
+    background-color: #980724;
+    cursor: pointer;
+  }
+  
+  .human-response button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #bebebe;
+    border-radius: 4px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #b71234;
+  
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  .loading-on{
+    margin:32px;
+  }
+  
+  .loading-ball{
+    width: 10px;
+      height: 10px;
+      background-color: #939393;
+      display: inline-block;
+      margin: 1px;
+      border-radius: 50%;
+      &:nth-child(1) {
+        animation: bounce 1s infinite;
+      }
+      &:nth-child(2) {
+        animation: bounce 1s infinite .2s;
+      }
+      &:nth-child(3) {
+        animation: bounce 1s infinite .4s;
+      }
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(8px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .pop-up{
+    @keyframes slidein {
+      0% {
+      }
+      70% {
+        transform: translateY(50px);
+      }
+      100% {
+        transform: translateY(200px);
+      }
+    }
+  }
+
+  .pop-up.minimized .chat-box,
+.pop-up.minimized .human-response {
+    display: none;
+}
+
+.pop-up.minimized .exit {
+    rotate: 180deg;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.pop-up.minimized .header {
+    border-radius: 9px;
+}
+
+
+  @media (max-width: 700px){
+    .pop-up {
+      width: 90%;
+    }
+
+    .title{
+        font-size: 1rem;
+    }
+
+  }
